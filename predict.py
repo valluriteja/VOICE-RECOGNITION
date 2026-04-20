@@ -2,7 +2,6 @@ import torch
 import torch.nn.functional as F
 import numpy as np
 import librosa
-
 from model import EmotionCNN
 
 # ===== SETTINGS (must match training) =====
@@ -28,7 +27,6 @@ EMOTIONS = [
     "Disgust",
     "Surprised"
 ]
-
 
 def extract_mel_spectrogram(file_path):
     y, sr = librosa.load(file_path, sr=SAMPLE_RATE)
